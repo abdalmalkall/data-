@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع تسجيل المستخدمين ومشاركة الصور</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>تسجيل المستخدمين</h1>
+        <form id="userForm">
+            <input type="text" id="name" placeholder="الاسم" required>
+            <input type="email" id="email" placeholder="البريد الإلكتروني" required>
+            <button type="submit">تسجيل</button>
+        </form>
+        <div id="message"></div>
+
+        <h2>المستخدمون المسجلون</h2>
+        <div id="userList"></div>
+
+        <h2>مشاركة الصور</h2>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input type="file" id="image" name="image" accept="image/*" required>
+            <button type="submit">رفع الصورة</button>
+        </form>
+
+        <h2>الصور المرفوعة</h2>
+        <div id="imageList">
+            <!-- صور مرفوعة ستظهر هنا -->
+            <div class="image-item">
+                <img src="path_to_image.jpg" alt="صورة" class="uploaded-img">
+            </div>
+            <p>لا توجد صور مرفوعة.</p>
+        </div>
+
+        <h2>مقالات</h2>
+        <a href="article.html">سوريا حرة </a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
