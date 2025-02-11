@@ -1,43 +1,57 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>موقع تسجيل المستخدمين ومشاركة الصور</title>
+    <title>موقع المنشورات والتعليقات</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>تسجيل المستخدمين</h1>
-        <form id="userForm">
-            <input type="text" id="name" placeholder="الاسم" required>
-            <input type="email" id="email" placeholder="البريد الإلكتروني" required>
-            <button type="submit">تسجيل</button>
-        </form>
-        <div id="message"></div>
 
-        <h2>المستخدمون المسجلون</h2>
-        <div id="userList"></div>
+    <!-- منشور المقال -->
+    <div class="post-container">
+        <h2>عنوان المقال</h2>
+        <p>هذا مقال نصي. يمكنك كتابة أي شيء هنا.</p>
 
-        <h2>مشاركة الصور</h2>
-        <form id="uploadForm" enctype="multipart/form-data">
-            <input type="file" id="image" name="image" accept="image/*" required>
-            <button type="submit">رفع الصورة</button>
-        </form>
-
-        <h2>الصور المرفوعة</h2>
-        <div id="imageList">
-            <!-- صور مرفوعة ستظهر هنا -->
-            <div class="image-item">
-                <img src="path_to_image.jpg" alt="صورة" class="uploaded-img">
-            </div>
-            <p>لاc توجد صور مرفوعة.</p>
-            <p></p>
+        <div class="comment-section">
+            <h3>التعليقات</h3>
+            <input type="text" id="commentInputArticle" class="comment-box" placeholder="اكتب تعليقك هنا...">
+            <button onclick="postComment('article')">إرسال</button>
+            <div id="commentsArticle"></div>
         </div>
-
-        <h2>مقالات</h2>
-        <a href="article.html">سوريا حرة </a>
     </div>
-    <script src="script.js"></script>
+
+    <!-- منشور الصورة -->
+    <div class="post-container">
+        <h2>صورة جميلة</h2>
+        <img src="https://via.placeholder.com/600x300" alt="صورة" style="width: 100%; height: auto;">
+        <div class="comment-section">
+            <h3>التعليقات</h3>
+            <input type="text" id="commentInputImage" class="comment-box" placeholder="اكتب تعليقك هنا...">
+            <button onclick="postComment('image')">إرسال</button>
+            <div id="commentsImage"></div>
+        </div>
+    </div>
+
+    <!-- منشور التسجيل الصوتي -->
+    <div class="post-container">
+        <h2>تسجيل صوتي</h2>
+        <audio controls>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+            متصفحك لا يدعم عنصر الصوت.
+        </audio>
+        <div class="comment-section">
+            <h3>التعليقات</h3>
+            <input type="text" id="commentInputAudio" class="comment-box" placeholder="اكتب تعليقك هنا...">
+            <button onclick="postComment('audio')">إرسال</button>
+            <div id="commentsAudio"></div>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
+    <script src="app.js"></script>
+
 </body>
 </html>
