@@ -1,57 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>موقع المنشورات والتعليقات</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>من أجل سوريا</title>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-
-    <!-- منشور المقال -->
-    <div class="post-container">
-        <h2>عنوان المقال</h2>
-        <p>هذا مقال نصي. يمكنك كتابة أي شيء هنا.</p>
-
-        <div class="comment-section">
-            <h3>التعليقات</h3>
-            <input type="text" id="commentInputArticle" class="comment-box" placeholder="اكتب تعليقك هنا...">
-            <button onclick="postComment('article')">إرسال</button>
-            <div id="commentsArticle"></div>
-        </div>
-    </div>
-
-    <!-- منشور الصورة -->
-    <div class="post-container">
-        <h2>صورة جميلة</h2>
-        <img src="https://via.placeholder.com/600x300" alt="صورة" style="width: 100%; height: auto;">
-        <div class="comment-section">
-            <h3>التعليقات</h3>
-            <input type="text" id="commentInputImage" class="comment-box" placeholder="اكتب تعليقك هنا...">
-            <button onclick="postComment('image')">إرسال</button>
-            <div id="commentsImage"></div>
-        </div>
-    </div>
-
-    <!-- منشور التسجيل الصوتي -->
-    <div class="post-container">
-        <h2>تسجيل صوتي</h2>
-        <audio controls>
-            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
-            متصفحك لا يدعم عنصر الصوت.
-        </audio>
-        <div class="comment-section">
-            <h3>التعليقات</h3>
-            <input type="text" id="commentInputAudio" class="comment-box" placeholder="اكتب تعليقك هنا...">
-            <button onclick="postComment('audio')">إرسال</button>
-            <div id="commentsAudio"></div>
-        </div>
-    </div>
-
-    <!-- Firebase SDK -->
-    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
-    <script src="app.js"></script>
-
+    <header>
+        <h1>من أجل سوريا </h1>
+    </header>
+    <main>
+        <p>من اجلنا و من اجلكم ومن أجل سوريا حرة كريمة عزيزة تنعم بخيراتها، وتبدع بمواهبها
+            ،لتكون فه الريادة بين اقرانها من الدول العربية. سالت هذه الدماء الطاهرة الزكية
+            لتسقق شجرة العزة والحرية فتستظل بظلالها سوريا كلها بكل أطيافها ومكوناتها
+            ومن اجلهم ايضا ومن اجل حريتنا كان هذا الموقع لندق به آذان اناس اصماء علهم
+            يسمعوا. ولنضع امام اعينهم علهات وتعى حقيقة هذا النظام الحاقد، الجائر.
+            الظالم، وماذا يفعل بشعب حراعزل. عاش كريما عزيزا يابو، الظلم ويتحدى، الظلام،
+            صبر وعانه، سنين طوال، إلـو، أن أدرك أنه لا سبيل مع المجرمين إلا القصاص، و الإقصاء
+            ، فمن تلطخت يده بدماء الأطفال والنساء والمسنين والشباب ازهار الوطن، لاتدرك
+            هذه اليد الاحسان والعطاء، فالشعب لم يعد يأمن علق كل مكتسباته و معاشه
+            وأحيائه وامواته من بطش هؤلاء الطغاة.
+     
+    </main>
+    <script src="/script.js"></script>
 </body>
 </html>

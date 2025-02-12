@@ -1,39 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap'); /* مثال لخط مشابه "عام الابل" من Google Fonts */
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Amiri', serif; /* استبدال الخط إلى عام الابل */
+    direction: rtl;
+    text-align: right;
     margin: 0;
     padding: 0;
+    background: url('https://www.transparenttextures.com/patterns/arabesque.png'), #e6d5b8;
+    color: #ff0000; /* تحسين قابلية القراءة */
+    font-size: 18px; /* حجم النص لتحسين قابلية القراءة */
+    line-height: 1.8; /* تحسين التباعد بين الأسطر */
 }
 
-.post-container {
-    width: 80%;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+header {
+  
+    background-size: cover;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 56px;
+    font-weight: bold;
+    text-shadow: 8px 6px 20px rgb(0, 0, 0);
+    border-bottom: 12px solid #000000;
+    filter: brightness(1.4) contrast(1.2);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
 }
 
-.comment-section {
-    margin-top: 20px;
+main {
+    padding: 50px;
+    max-width: 1100px;
+    margin: 70px auto;
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    border-radius: 35px;
+    border: 8px solid #008000; /* أخضر تمثيلي للثورة */
+    backdrop-filter: blur(15px);
+    animation: fadeIn 2s ease-in-out;
 }
 
-.comment-box {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    background-color: #f1f1f1;
-    border: none;
-    border-radius: 5px;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-.comment {
-    background-color: #f9f9f9;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
+p {
+    line-height: 2.5;
+    font-size: 26px;
+    color: #ff0000; /* أحمر للثورة */
+    text-indent: 35px;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
+    font-weight: 500;
+    margin-bottom: 40px;
+    letter-spacing: 0.5px; /* تحسين التباعد بين الحروف */
 }
 
-.anonymous {
-    color: gray;
-    font-style: italic;
+button, a {
+    display: inline-block;
+    padding: 16px 32px;
+    background: linear-gradient(145deg, #008000, #004d00);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 20px;
+    box-shadow: 6px 6px 18px rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin: 10px;
+    text-transform: uppercase; /* جعل النص بالحروف الكبيرة */
+}
+
+button:hover, a:hover {
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.7);
+    background: linear-gradient(145deg, #004d00, #008000);
+    transform: scale(1.05); /* تأثير تكبير عند المرور */
+}
+
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 25px;
+    text-align: center;
+    font-size: 20px;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.7);
+    position: relative;
+    margin-top: 60px;
+}
+
+footer::after {
+    content: "الحرية لنا";
+    font-size: 28px;
+    font-weight: bold;
+    color: #000000;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+h1, h2, h3 {
+    color: #333;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+h1 {
+    font-size: 56px;
+    padding-bottom: 12px;
+}
+
+h2 {
+    font-size: 42px;
+    color: #008000;
+}
+
+h3 {
+    font-size: 36px;
+    color: #7e0101;
+}
+
+a {
+    color: #881c1c;
+    text-decoration: none;
+    transition: color 0.3s;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+a:hover {
+    color: #ff0000;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* إضافة تأثيرات على النص داخل المقال */
+p:hover {
+    color: #ad0000;
+    transform: scale(1.02); /* تأثير تكبير خفيف */
+    transition: transform 0.3s, color 0.3s ease-in-out;
 }
