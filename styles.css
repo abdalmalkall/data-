@@ -1,102 +1,96 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic&display=swap');
 
+/* إعدادات الجسم */
 body {
     font-family: 'Noto Kufi Arabic', sans-serif;
     direction: rtl; /* تغيير الاتجاه ليكون من اليمين لليسار */
     text-align: right; /* محاذاة النصوص إلى اليمين */
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
-    color: #000000; /* جميع النصوص باللون الأسود */
+    background-color: #f7f7f7; /* خلفية فاتحة */
+    color: #333; /* نصوص باللون الرمادي الغامق لتحسين القراءة */
     font-size: 18px;
     line-height: 1.6;
 }
 
-/* تنسيق الرأس مع زوايا مدورة وإطار سفلي أحمر */
+/* تنسيق الرأس */
 header {
-    background-color: #797474; /* خلفية رمادية */
+    background-color: #003b4f; /* خلفية داكنة لزيادة التباين */
     height: 120px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    color: #ffffff; /* النصوص باللون الأبيض */
-    font-size: 56px;
+    justify-content: space-between;
+    padding: 0 30px;
+    color: #ffffff; /* نصوص باللون الأبيض */
+    font-size: 50px;
     font-weight: bold;
-    text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.5);
-    border-bottom: 12px solid #797474; /* إطار رمادي أسفل الرأس */
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.5);
 }
 
-/* منطقة المحتوى الرئيسية بإطار رمادي وزوايا مدورة */
+/* تنسيق شريط التنقل العلوي */
+nav {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    font-size: 20px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff0000;
+}
+
+/* منطقة المحتوى الرئيسية */
 main {
     padding: 50px;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 70px auto;
-    background-color: #ffffff; /* خلفية بيضاء */
+    background-color: #ffffff; /* خلفية بيضاء لزيادة وضوح النصوص */
+    color: #333; /* لون نص داكن لسهولة القراءة */
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-    border-radius: 35px;
-    border: 8px solid #79747481; /* إطار رمادي */
+    border-radius: 15px;
     animation: fadeIn 2s ease-in-out;
 }
 
-/* توسيط الفيديو والصور */
-img, video {
+/* تعريف حركة fadeIn لضمان ظهور المحتوى بسلاسة */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* تنسيق الصور والفيديوهات */
+img,
+video {
     display: block;
     margin: 0 auto;
-    max-width: 100%; /* لضمان أن الصورة أو الفيديو لا يتجاوزان الحافة */
-}
-
-/* تنسيق شريط البحث */
-.search-container {
-    text-align: center; /* توسيط الحقل */
-    margin-top: 20px;
-    margin-bottom: 40px;
-}
-
-.search-container input[type="text"] {
-    padding: 12px;
-    width: 60%;
-    font-size: 18px;
-    border-radius: 8px;
-    border: 2px solid #797474;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center; /* محاذاة النص داخل مربع البحث */
-}
-
-.search-container button {
-    padding: 12px 24px;
-    background-color: #797474;
-    color: #ffffff;
-    font-size: 18px;
-    border-radius: 8px;
-    border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.search-container button:hover {
-    background-color: #b30000; /* تغيير اللون عند التمرير */
+    max-width: 100%;
 }
 
 /* تنسيق الفقرات */
 p {
     line-height: 2.5;
-    font-size: 26px;
-    color: #000000;
+    font-size: 24px;
+    color: #333; /* نص داكن لقراءة جيدة */
     text-indent: 35px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
-    font-weight: 500;
     margin-bottom: 40px;
     letter-spacing: 0.5px;
 }
 
-/* تنسيق الأزرار والروابط مع زوايا مدورة */
+/* تنسيق الأزرار العادية */
 button, a {
     display: inline-block;
     padding: 16px 32px;
-    background: linear-gradient(145deg, #ff0000, #b30000);
-    color: #ffffff; /* النصوص بالأبيض */
+    background: linear-gradient(145deg, #032b3a, #54aac7);
+    color: #ffffff;
     font-size: 24px;
     font-weight: bold;
     border-radius: 20px;
@@ -105,17 +99,19 @@ button, a {
     transition: all 0.3s ease;
     margin: 10px;
     text-transform: uppercase;
+    border: none;
+    cursor: pointer;
 }
 
 button:hover, a:hover {
     box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.7);
-    background: linear-gradient(145deg, #b30000, #ff0000);
+    background: linear-gradient(145deg, #003b4f, #85aab8);
     transform: scale(1.05);
 }
 
-/* تنسيق التذييل بزوايا مدورة */
+/* تنسيق التذييل */
 footer {
-    background-color: #000000;
+    background-color: #003b4f; /* خلفية داكنة لضمان تباين جيد مع النص */
     color: #ffffff;
     padding: 25px;
     text-align: center;
@@ -123,25 +119,25 @@ footer {
     box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.7);
     position: relative;
     margin-top: 60px;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
 }
 
-/* نص زخرفي في التذييل */
+/* عرض عبارة "من أجل سوريا" بلون أسود في التذييل */
 footer::after {
-    content: "الحرية لنا";
+    content: "من أجل سوريا";
     font-size: 28px;
     font-weight: bold;
-    color: #ff0000;
+    color: #000000;
     position: absolute;
     bottom: 15px;
-    right: 15px; /* تغيير الموقع إلى اليمين */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    right: 15px;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
 }
 
 /* تنسيق العناوين */
-h1, h2, h3 {
-    color: #000000;
+h1,
+h2,
+h3 {
+    color: #003b4f; /* لون أزرق داكن للعناوين */
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
 }
 
@@ -158,51 +154,118 @@ h3 {
     font-size: 36px;
 }
 
-/* تنسيق الروابط */
-a {
-    color: #000000;
+/* تنسيق الروابط النصية (للروابط داخل النصوص) */
+a:link,
+a:visited {
+    color: #003b4f;
     text-decoration: none;
     transition: color 0.3s;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 a:hover {
-    color: #000000;
+    color: #ffffff;
     text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
 }
 
-/* تأثير تمرير الفقرة */
-p:hover {
-    color: #000000;
-    transform: scale(1.02);
-    transition: transform 0.3s, color 0.3s ease-in-out;
-}
-
-/* التفاعل مع الشاشات الصغيرة */
+/* التنسيق مع الشاشات الصغيرة */
 @media screen and (max-width: 768px) {
     header {
-        font-size: 32px;
+        font-size: 28px;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
     }
-
+    
     main {
-        padding: 30px;
+        padding: 20px;
         margin: 20px;
     }
-
-    h1, h2, h3 {
+    
+    h1,
+    h2,
+    h3 {
         font-size: 30px;
     }
-
+    
     p {
-        font-size: 20px;
+        font-size: 18px;
     }
-
+    
     button, a {
-        font-size: 20px;
+        font-size: 18px;
         padding: 12px 24px;
     }
-
+    
     .search-container input[type="text"] {
         width: 80%;
     }
+}
+
+/* تنسيق كبسة "انتقل إلى الصفحة التالية" */
+.next-page-button {
+    display: inline-block;
+    padding: 16px 32px;
+    background: linear-gradient(145deg, #032b3a, #54aac7);
+    color: #000000;  /* نص أسود */
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 20px;
+    box-shadow: 6px 6px 18px rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin: 20px auto;
+    text-align: center;
+    cursor: pointer;
+}
+
+.next-page-button:hover {
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.7);
+    background: linear-gradient(145deg, #003b4f, #85aab8);
+    transform: scale(1.05);
+    color: #000000;
+}
+
+/* تنسيق شريط البحث الجديد بشكل أفخم */
+.search-container {
+    text-align: center;
+    margin: 30px 0;
+    background: linear-gradient(135deg, #003b4f, #54aac7);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.search-container input[type="text"] {
+    padding: 15px 20px;
+    width: 50%;
+    max-width: 600px;
+    font-size: 20px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    box-shadow: inset 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.search-container input[type="text"]:focus {
+    box-shadow: inset 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.search-container button {
+    padding: 15px 2cap;
+    margin-left: 10px;
+    background: linear-gradient(135deg, #54aac7, #003b4f);
+    color: #ffffff;
+    font-size: 20px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+.search-container button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #003b4f, #54aac7);
 }
