@@ -2,11 +2,11 @@
 
 body {
     font-family: 'Noto Kufi Arabic', sans-serif;
-    direction: rtl;
-    text-align: right;
+    direction: rtl; /* تغيير الاتجاه ليكون من اليمين لليسار */
+    text-align: right; /* محاذاة النصوص إلى اليمين */
     margin: 0;
     padding: 0;
-    background: url('https://www.transparenttextures.com/patterns/arabesque.png'), #e6d5b8;
+    background-color: #ffffff;
     color: #000000; /* جميع النصوص باللون الأسود */
     font-size: 18px;
     line-height: 1.6;
@@ -14,19 +14,16 @@ body {
 
 /* تنسيق الرأس مع زوايا مدورة وإطار سفلي أحمر */
 header {
-    background-size: cover;
+    background-color: #ff0000; /* خلفية حمراء */
     height: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #000000;
+    color: #ffffff; /* النصوص باللون الأبيض */
     font-size: 56px;
     font-weight: bold;
     text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.5);
-    border-bottom: 12px solid #2d7205; /* إطار أحمر أسفل الرأس */
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    filter: brightness(1.4) contrast(1.2);
+    border-bottom: 12px solid #b30000; /* إطار أحمر أسفل الرأس */
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
 }
 
@@ -35,11 +32,10 @@ main {
     padding: 50px;
     max-width: 1100px;
     margin: 70px auto;
-    background: rgba(255, 255, 255, 0.85);
+    background-color: #ffffff; /* خلفية بيضاء */
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
     border-radius: 35px;
-    border: 8px solid #8a1111; /* إطار أحمر */
-    backdrop-filter: blur(15px);
+    border: 8px solid #b30000; /* إطار أحمر */
     animation: fadeIn 2s ease-in-out;
 }
 
@@ -69,7 +65,7 @@ button, a {
     display: inline-block;
     padding: 16px 32px;
     background: linear-gradient(145deg, #ff0000, #b30000);
-    color: #000000;
+    color: #ffffff; /* النصوص بالأبيض */
     font-size: 24px;
     font-weight: bold;
     border-radius: 20px;
@@ -100,7 +96,7 @@ footer {
     border-bottom-right-radius: 30px;
 }
 
-/* نص زخرفي في التذييل بإطار أحمر */
+
 footer::after {
     content: "الحرية لنا";
     font-size: 28px;
@@ -108,7 +104,7 @@ footer::after {
     color: #ff0000;
     position: absolute;
     bottom: 15px;
-    right: 15px;
+    right: 15px; /* تغيير الموقع إلى اليمين */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
@@ -149,4 +145,29 @@ p:hover {
     color: #000000;
     transform: scale(1.02);
     transition: transform 0.3s, color 0.3s ease-in-out;
+}
+
+/* التفاعل مع الشاشات الصغيرة */
+@media screen and (max-width: 768px) {
+    header {
+        font-size: 32px;
+    }
+
+    main {
+        padding: 30px;
+        margin: 20px;
+    }
+
+    h1, h2, h3 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    button, a {
+        font-size: 20px;
+        padding: 12px 24px;
+    }
 }
