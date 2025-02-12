@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>من أجل سوريا</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <header>
+        <h1>مـن أجـل سـوريـا</h1>
+    </header>
+    
+    <div class="search-container">
+        <input type="text" id="search" placeholder="ابحث هنا..." onkeyup="searchContent()">
+    </div>
+    
+    <main>
+        <div id="content">
+            <p id="content-1">
+                من اجلنا ومن اجلكم ومن أجل سوريا حرة كريمة...<br>
+                <img src="image1.jpg" alt="صورة 1" />
+                <video controls>
+                    <source src="video1.mp4" type="video/mp4">
+                    متصفحك لا يدعم الفيديو.
+                </video>
+            </p>
+            <p id="content-2">
+                النص التالي يتعلق بحريتنا...<br>
+                <img src="image2.jpg" alt="صورة 2" />
+                <video controls>
+                    <source src="video2.mp4" type="video/mp4">
+                    متصفحك لا يدعم الفيديو.
+                </video>
+            </p>
+        </div>
+        
+        <!-- زر العودة إلى الصفحة الرئيسية -->
+        <div class="back-to-home">
+            <button onclick="goHome()">العودة إلى الصفحة الرئيسية</button>
+        </div>
+    </main>
+    
+    <footer>
+        <p>حقوق الطبع والنشر © 2025 من أجل سوريا</p>
+    </footer>
+
+    <script>
+        function searchContent() {
+            let input = document.getElementById('search');
+            let filter = input.value.toLowerCase();
+            let content = document.getElementById('content');
+            let paragraphs = content.getElementsByTagName('p');
+            
+            for (let i = 0; i < paragraphs.length; i++) {
+                let text = paragraphs[i].innerText || paragraphs[i].textContent;
+                if (text.toLowerCase().indexOf(filter) > -1) {
+                    paragraphs[i].style.display = "";
+                } else {
+                    paragraphs[i].style.display = "none";
+                }
+            }
+        }
+
+        // دالة العودة إلى الصفحة الرئيسية
+        function goHome() {
+            window.location.href = "index.html";  // ضع هنا رابط الصفحة الرئيسية
+        }
+    </script>
+</body>
+</html>

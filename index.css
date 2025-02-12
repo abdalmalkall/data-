@@ -206,3 +206,24 @@ p:hover {
         width: 80%;
     }
 }
+/* تنسيق زر العودة إلى الصفحة الرئيسية */
+.back-to-home {
+    text-align: center; /* توسيط الزر */
+    margin-top: 30px;
+}
+
+.back-to-home button {
+    padding: 12px 24px;
+    background-color: #797474;
+    color: #ffffff;
+    font-size: 18px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.back-to-home button:hover {
+    background-color: #b30000; /* تغيير اللون عند التمرير */
+}
