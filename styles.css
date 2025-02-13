@@ -185,3 +185,53 @@ table tbody td {
   padding: 10px;
   margin-top: 10px;
 }
+
+/* ====== تحسين التنسيق للأجهزة المحمولة ====== */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 100px; /* تقليل ارتفاع الهيدر */
+  }
+
+  .hero-section .overlay h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-section .overlay p {
+    font-size: 1rem;
+  }
+
+  .cards-section {
+    flex-direction: column; /* تحويل البطاقات إلى عمودية */
+    align-items: center;
+  }
+
+  .card {
+    width: 90%; /* جعل عرض البطاقات يناسب الشاشة الصغيرة */
+    margin-bottom: 20px;
+  }
+
+  .info-section {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .info-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .info-section p {
+    font-size: 0.9rem;
+  }
+
+  .table-container {
+    margin: 10px 0;
+  }
+
+  table {
+    min-width: 400px; /* تقليل الحد الأدنى لعرض الجدول */
+  }
+
+  .footer img {
+    max-height: 80px; /* تقليل ارتفاع صورة الفوتر */
+  }
+}
