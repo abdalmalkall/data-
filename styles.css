@@ -194,6 +194,7 @@ table tbody td {
   max-height: 100px;
   object-fit: cover;
   display: block;
+
 }
 
 .copyright {
@@ -203,6 +204,24 @@ table tbody td {
   background-color: #222;
   padding: 10px;
   margin-top: 10px;
+}
+
+.chart-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.chart-container h3 {
+  margin-bottom: 20px; /* إضافة مساحة بين العنوان والصورة */
+}
+
+.chart-img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, .9); /* إضافة الظل للصورة */
+  border-radius: 8px; /* يمكنك إضافة هذا لإعطاء الصورة زوايا دائرية */
 }
 
 /* ====== تحسين التنسيق للأجهزة المحمولة ====== */
@@ -242,3 +261,37 @@ table tbody td {
     font-size: 0.9rem;
   }
 }
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+button:first-child {
+  background: linear-gradient(135deg, #ff9800, #e65100);
+  color: white;
+}
+
+button:last-child {
+  background: linear-gradient(135deg, #2ecc71, #1e8449);
+  color: white;
+}
+
+button:hover {
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+button:active {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  transform: translateY(2px);
+}
+
