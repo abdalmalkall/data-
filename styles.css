@@ -194,7 +194,6 @@ table tbody td {
   max-height: 100px;
   object-fit: cover;
   display: block;
-
 }
 
 .copyright {
@@ -227,7 +226,7 @@ table tbody td {
 /* ====== تحسين التنسيق للأجهزة المحمولة ====== */
 @media (max-width: 768px) {
   .hero-section {
-    height: 100px;
+    height: 120px; /* تقليص الارتفاع */
   }
 
   .hero-section .overlay h1 {
@@ -241,57 +240,78 @@ table tbody td {
   .cards-section {
     flex-direction: column;
     align-items: center;
+    gap: 10px; /* تقليل الفجوات بين البطاقات */
   }
 
   .card {
     width: 90%;
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* تقليل المسافة بين البطاقات */
   }
 
-  .info-section {
+  .info-section, .about-section {
     margin: 20px;
     padding: 15px;
   }
 
-  .info-section h2 {
-    font-size: 1.5rem;
+  .info-section h2, .about-section h2 {
+    font-size: 1.5rem; /* تقليل حجم العنوان */
   }
 
-  .info-section p {
-    font-size: 0.9rem;
+  .info-section p, .about-section p {
+    font-size: 0.9rem; /* تقليل حجم النص */
+  }
+
+  .footer img {
+    width: 100%; /* جعل الصورة تتناسب مع الشاشة */
+    max-height: auto;
+  }
+
+  .chart-img {
+    max-width: 90%; /* تقليل عرض الصورة */
+    margin: 0 auto;
+  }
+
+  button {
+    width: 100%; /* جعل الأزرار تأخذ كامل العرض */
+    padding: 12px 0; /* تحسين الحشو للأزرار */
   }
 }
-button {
-  padding: 10px 15px;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-  position: relative;
-  display: inline-block;
-  text-transform: uppercase;
-}
+             
+
+
 
 button:first-child {
-  background: linear-gradient(135deg, #ff9800, #e65100);
+  background: linear-gradient(135deg, #f8c471, #e67e22); /* تدرج ألوان دافئة */
   color: white;
+  border: 2px solid #d35400; /* حدود أنيقة بلون البرتقالي الداكن */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  padding: 15px 30px; /* زيادة الحجم */
+  border-radius: 25px; /* جعل الحواف دائرية */
 }
 
 button:last-child {
-  background: linear-gradient(135deg, #2ecc71, #1e8449);
+  background: linear-gradient(135deg, #2c3e50, #000); /* تدرج ألوان أسود أنيق */
   color: white;
+  border: 2px solid #34495e; /* حدود داكنة أنيقة */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  padding: 10px 15px; /* زيادة الحجم */
+  border-radius: 25px; /* جعل الحواف دائرية */
 }
 
 button:hover {
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
-  transform: translateY(-2px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
+  transform: translateY(-4px); /* رفع الزر قليلاً عند التحويم */
 }
 
 button:active {
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-  transform: translateY(2px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+  transform: translateY(2px); /* تأثير الضغط */
 }
-
